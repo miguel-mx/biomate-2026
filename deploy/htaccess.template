@@ -1,0 +1,27 @@
+# Fallback option: rename this file to ".htaccess" and drop it directly in
+# /var/www/html/2da-embm/.htaccess if you'd rather not edit the main Apache
+# config at all. Prefer deploy/httpd-alias-snippet.conf instead when you can —
+# it's faster (no per-request .htaccess filesystem lookup) and you already
+# edit that config file anyway to add the Alias line.
+#
+# Requires AllowOverride to permit at least FileInfo for THIS directory —
+# by default RHEL's httpd sets "AllowOverride None", so you must scope an
+# override for just the alias target in /etc/httpd/conf/httpd.conf (or
+# wherever your Alias line lives):
+#
+#   <Directory "/var/www/html/2da-embm">
+#       AllowOverride All
+#   </Directory>
+#
+# then: sudo systemctl restart httpd
+
+RewriteEngine On
+
+# Canonicalize: /page.html -> /page (permanent redirect, avoids duplicate URLs)
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Internally serve page.html when /page is requested (no visible redirect)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^.]+)$ $1.html [L]

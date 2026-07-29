@@ -1,0 +1,95 @@
+/* ===================== Banner ===================== */
+.proj-banner {
+  position: relative;
+  background: #fbf8f3;
+  overflow: hidden;
+  padding: 5.5rem 1rem 7rem;
+  text-align: center;
+}
+.proj-banner-art {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: clamp(150px, 19vw, 260px);
+  width: auto;
+  max-width: none;
+  pointer-events: none;
+  z-index: 1;
+}
+.proj-banner .container { position: relative; z-index: 2; }
+.proj-banner-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 56px);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  max-width: 900px;
+  margin: 0 auto 1.25rem;
+  color: #060606;
+}
+.proj-banner-instructors {
+  color: #535353;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+/* ===================== Info bar (Objetivo / Resultados / Pre-requisitos) ===================== */
+.proj-info-bar {
+  position: relative;
+  z-index: 3;
+  margin-top: -4.5rem;
+  padding-bottom: 2rem;
+}
+.proj-info-bar .row {
+  background: #050505;
+  border-radius: 16px;
+  margin: 0;
+  padding: 2rem 1rem;
+}
+.proj-info-card { display: flex; gap: 1rem; align-items: flex-start; height: 100%; padding: 0 .5rem; }
+.proj-info-icon { width: 27px; height: 27px; object-fit: contain; flex: 0 0 27px; margin-top: 4px; }
+.proj-info-card h3 { color: #fff; font-size: 21px; letter-spacing: -0.01em; margin-bottom: .5rem; font-weight: 400; }
+.proj-info-card p { color: #727272; font-size: 16px; line-height: 1.38; margin: 0; }
+
+/* ===================== Estructura académica / Objeto de estudio ===================== */
+.proj-panel {
+  background: #fcfcfc;
+  border-radius: 8px;
+  padding: 2rem;
+  height: 100%;
+}
+.proj-panel-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 40px);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: #1f1f1f;
+  margin-bottom: 1.25rem;
+}
+.proj-panel p { color: #575756; font-size: 16px; line-height: 1.4; margin-bottom: 1rem; }
+.proj-panel ul { color: #575756; font-size: 16px; line-height: 1.4; padding-left: 1.25rem; margin-bottom: 1rem; }
+.proj-panel ul li { margin-bottom: .75rem; }
+.proj-panel p:last-child, .proj-panel ul:last-child { margin-bottom: 0; }
+
+/* ===================== Otros proyectos (dark) ===================== */
+.proj-related { background: #050505; }
+.proj-related .h-section { color: #fff; }
+.proj-card-dark { color: #fff; }
+.proj-card-dark .proj-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.proj-card-dark:hover .proj-title { color: var(--blue); }
+
+@media (max-width: 767.98px) {
+  .proj-banner-art { height: clamp(110px, 28vw, 150px); opacity: .5; }
+  .proj-info-bar { margin-top: -2rem; }
+  .proj-info-bar .row > [class^="col"] { margin-bottom: 1.5rem; }
+  .proj-info-bar .row > [class^="col"]:last-child { margin-bottom: 0; }
+}

@@ -1,0 +1,311 @@
+:root {
+  --ink: #050505;
+  --ink-2: #121212;
+  --gray: #575756;
+  --gray-2: #727272;
+  --line: #d9d9d9;
+  --green: #b2ff00;
+  --red: #e64123;
+  --darkred: #b80f0d;
+  --yellow: #ffcb00;
+  --blue: #3e1dff;
+  --slate: #cbd5e1;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--ink-2);
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.font-serif { font-family: 'Cinzel', serif; }
+.font-display { font-family: 'Bricolage Grotesque', 'Inter', sans-serif; }
+
+/* ---------- Navbar ---------- */
+.navbar-sembm {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+.navbar-sembm .navbar-brand img { height: 42px; }
+.navbar-sembm .nav-link {
+  color: #000;
+  font-weight: 500;
+  font-size: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.navbar-sembm .nav-link.active { font-weight: 700; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 3.5rem 1rem 2rem;
+  overflow: hidden;
+}
+.hero .mariposa {
+  position: absolute;
+  width: min(46vw, 520px);
+  pointer-events: none;
+  opacity: .95;
+  z-index: 0;
+}
+.hero .mariposa.right { top: -60px; right: -90px; }
+.hero .mariposa.left  { top: 210px; left: -140px; transform: rotate(90deg); }
+.hero .container { position: relative; z-index: 2; }
+
+.hero-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(20px, 3.2vw, 36px);
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 1.5rem;
+}
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  font-size: clamp(52px, 12vw, 128px);
+  margin: 0;
+}
+.hero-sub {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  color: #9f9f9f;
+  font-size: clamp(15px, 2.2vw, 24px);
+  letter-spacing: -0.01em;
+  margin-top: 1.75rem;
+}
+.hero-date {
+  font-size: clamp(22px, 3.4vw, 32px);
+  letter-spacing: -0.04em;
+  margin-top: 1.5rem;
+}
+.btn-pill {
+  border: 1px solid #000;
+  border-radius: 24px;
+  padding: .65rem 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  background: transparent;
+  transition: all .2s ease;
+}
+.btn-pill:hover { background: #000; color: #fff; }
+
+/* ---------- Facts bar ---------- */
+.facts {
+  background: var(--ink);
+  border-radius: 10px;
+  color: #fff;
+  padding: 2.25rem 1.5rem;
+}
+.facts .fact-num {
+  font-weight: 700;
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: 1.1;
+}
+.facts .fact-label { color: var(--slate); font-weight: 500; font-size: 16px; }
+
+/* ---------- Section helpers ---------- */
+.section { padding: 4rem 0; }
+.section-alt { background: #fcfcfc; }
+.h-section {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: clamp(30px, 4vw, 46px);
+  margin-bottom: 2rem;
+}
+.lead-32 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(20px, 2.6vw, 32px);
+  line-height: 1.25;
+  letter-spacing: -0.03em;
+}
+.divider { border: 0; border-top: 1px solid #e6e6e6; margin: 0; }
+
+/* ---------- Steps (¿Qué haremos?) ---------- */
+.steps-row { position: relative; }
+.steps-row::before {
+  content: '';
+  position: absolute;
+  top: calc(var(--bs-gutter-y, 0px) + 29px);
+  left: 16.6667%;
+  right: 16.6667%;
+  height: 1px;
+  background: var(--line);
+  z-index: 0;
+}
+@media (max-width: 767.98px) {
+  .steps-row::before { display: none; }
+}
+.step-circle {
+  width: 58px; height: 58px; border-radius: 50%;
+  /* border: 1px 0 var(--ink); */
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700; font-size: 32px;
+  margin: 0 auto 1rem;
+  background: #b2ff00;
+  position: relative;
+  z-index: 1;
+}
+.step-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700; font-size: 26px;
+  margin-bottom: 1rem;
+}
+.step-body { color: var(--gray); font-size: 16px; line-height: 1.5; letter-spacing: -0.02em; }
+
+/* ---------- Method timeline ---------- */
+.method-item { position: relative; padding-left: 64px; padding-bottom: 2.5rem; }
+.method-item::before {
+  content: '';
+  position: absolute; left: 18px; top: 40px; bottom: -8px;
+  width: 1px; background: var(--line);
+}
+.method-item:last-child::before { display: none; }
+.method-badge {
+  position: absolute; left: 0; top: 0;
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--ink); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.method-title { font-weight: 700; font-size: 20px; margin-bottom: .5rem; letter-spacing: -0.03em; }
+.method-body { font-size: 16px; line-height: 1.6; }
+
+/* ---------- Project cards ---------- */
+.proj-card { display: block; text-decoration: none; color: inherit; }
+.proj-card .thumb {
+  width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+  background: #f7f7f8; border-radius: 2px; display: block;
+}
+.proj-card .proj-title {
+  font-weight: 700; font-size: 22px; line-height: 1.25;
+  letter-spacing: -0.03em; text-decoration: underline;
+  margin: 1rem 0 .4rem;
+}
+.proj-card .proj-authors { color: var(--gray-2); font-size: 15px; line-height: 1.45; }
+.proj-card:hover .proj-title { color: var(--blue); }
+
+/* ---------- Selección bullets ---------- */
+.bullet-list { color: var(--gray); font-size: 18px; line-height: 1.55; padding-left: 1.25rem; }
+.bullet-list li { margin-bottom: 1.25rem; }
+
+/* ---------- Requisitos cards ---------- */
+.req-card {
+  background: #000; color: #fff; border-radius: 4px;
+  padding: 1.5rem; height: 100%;
+}
+.req-card .req-ico {
+  width: 34px; height: 34px; margin-bottom: 1rem;
+  display: flex; align-items: center; justify-content: center;
+}
+.req-card h3 { font-size: 21px; letter-spacing: -0.01em; margin-bottom: .5rem; font-weight: 400; }
+.req-card p { font-size: 16px; line-height: 1.45; color: #fff; margin-bottom: .75rem; }
+.req-card p:last-child { margin-bottom: 0; }
+
+/* ---------- Schedule ---------- */
+.schedule-wrap { overflow-x: auto; }
+table.schedule {
+  width: 100%; min-width: 860px; border-collapse: collapse;
+  font-size: 15px; text-align: center; table-layout: fixed;
+}
+table.schedule th, table.schedule td {
+  border: 1px solid var(--line);
+  padding: 10px 6px; vertical-align: middle;
+}
+table.schedule thead th { font-weight: 700; color: #000; }
+table.schedule .time { color: #535353; text-align: right; white-space: nowrap; font-size: 14px; }
+.c-green  { background: var(--green); }
+.c-red    { background: var(--red);    color: #fff; }
+.c-yellow { background: var(--yellow); color: #8f7200; }
+.c-blue   { background: var(--blue);   color: #fff; }
+.c-dark   { background: var(--darkred);color: #fff; }
+.c-black  { background: #000;          color: #fff; }
+
+.legend { font-size: 15px; }
+.legend .dot { width: 26px; height: 26px; border-radius: 50%; flex: 0 0 26px; }
+.legend .dot.y { background: var(--yellow); }
+.legend .dot.r { background: var(--red); }
+
+/* ---------- Plenarias ---------- */
+.plenaria .p-title { font-weight: 700; font-size: 22px; line-height: 1.25; letter-spacing: -0.03em; text-decoration: underline; }
+.plenaria .p-meta { font-size: 15px; color: #000; line-height: 1.5; margin-top: 1rem; }
+
+/* ---------- Sede ---------- */
+.sede-img { width: 100%; border-radius: 4px; object-fit: cover; }
+.sede-map-wrap {
+  width: 100%;
+  aspect-ratio: 21 / 9;
+  max-height: 420px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.sede-map-wrap iframe { width: 100%; height: 100%; border: 0; display: block; }
+.sede-map-link { display: inline-block; margin-top: .75rem; font-size: 14px; }
+.link-underline-anim {
+  color: #000; text-decoration: none; border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+}
+.contact-pill {
+  background: #000; color: #fff; border-radius: 28px;
+  padding: .55rem 1.25rem; display: inline-flex; flex-direction: column;
+  align-self: flex-start;
+}
+.contact-pill .name { font-weight: 600; font-size: 15px; }
+.contact-pill .mail { font-size: 14px; opacity: .85; }
+
+/* ---------- Comité ---------- */
+.comite { background: #000; color: #fff; }
+.comite .h-section { color: #fff; }
+.comite .person { margin-bottom: 1.5rem; }
+.comite .person .p-name { font-weight: 800; font-size: 13px; }
+.comite .person .p-org  { font-weight: 300; font-size: 13px; opacity: .85; }
+
+/* ---------- Footer (shared across all pages) ---------- */
+.site-footer-full {
+  background: #fff;
+  color: #000;
+  padding: 4rem 0 2rem;
+  border-top: 1px solid #eee;
+}
+.footer-crest { width: 44px; height: auto; flex: 0 0 44px; }
+.footer-crest-text {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  color: #000;
+}
+.footer-ccm-logo { height: 38px; display: block; }
+.footer-links { list-style: none; padding: 0; margin: 0; }
+.footer-links li { margin-bottom: .85rem; }
+.footer-links a { color: #000; text-decoration: none; font-size: 16px; }
+.footer-links a:hover { text-decoration: underline; }
+.footer-social-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  font-size: clamp(20px, 2.4vw, 32px);
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+}
+.footer-social-ico { width: 24px; height: 24px; object-fit: contain; }
+.footer-divider { border: 0; border-top: 1px solid #e6e6e6; margin: 2.5rem 0 1.5rem; }
+.footer-bottom { font-size: 13px; color: #000; }
+.footer-bottom a { color: #000; text-decoration: underline; }
+
+@media (max-width: 767.98px) {
+  .hero .mariposa.left { display: none; }
+  .hero .mariposa.right { top: -30px; right: -60px; width: 60vw; }
+}
