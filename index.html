@@ -413,13 +413,60 @@
     <div class="container">
       <h2 class="h-section">Pláticas plenarias</h2>
       <div class="row g-4 g-lg-5">
-        <div class="col-sm-6 col-md-6 plenaria">
-          <div class="p-title">¿Cómo se forman las nuevas especies? El papel del canto y la coloración del plumaje en la especiación en aves</div>
-          <div class="p-meta"><span class="fw-bold">Clementina González Zaragoza</span><br />Instituto de Investigaciones sobre los Recursos Naturales, UMSNH</div>
+        <div class="col-sm-6 col-lg-3 plenaria">
+          <button type="button" class="plenaria-card" data-key="clementina">
+            <img class="p-photo" src="assets/clementina.png" alt="Clementina González Zaragoza" />
+            <div class="p-title">¿Cómo se forman las nuevas especies? El papel del canto y la coloración del plumaje en la especiación en aves</div>
+            <div class="p-meta"><span class="fw-bold">Clementina González Zaragoza</span><br />Instituto de Investigaciones sobre los Recursos Naturales, UMSNH</div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-3 plenaria">
+          <button type="button" class="plenaria-card" data-key="miramontes">
+            <img class="p-photo" src="assets/miramontes.png" alt="Pedro Eduardo Miramontes Vidal" />
+            <div class="p-title">Título por confirmar</div>
+            <div class="p-meta"><span class="fw-bold">Pedro Eduardo Miramontes Vidal</span><br />Facultad de Ciencias, UNAM</div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-3 plenaria">
+          <button type="button" class="plenaria-card" data-key="jesus">
+            <img class="p-photo" src="assets/jesus.png" alt="Jesús Muciño Raymundo" />
+            <div class="p-title">Una apreciación de los sistemas dinámicos en años recientes</div>
+            <div class="p-meta"><span class="fw-bold">Jesús Muciño Raymundo</span><br />Centro de Ciencias Matemáticas, UNAM</div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-3 plenaria">
+          <button type="button" class="plenaria-card" data-key="jorge">
+            <img class="p-photo" src="assets/Jorge-Contreras-Garduno.png" alt="Jorge Contreras Garduño" />
+            <div class="p-title">Memoria inmunitaria en invertebrados: un nuevo cambio de paradigma en biología</div>
+            <div class="p-meta"><span class="fw-bold">Jorge Contreras Garduño</span><br />Escuela Nacional de Estudios Superiores, Unidad Morelia, UNAM</div>
+          </button>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ===================== PLENARIA MODAL ===================== -->
+  <div class="modal fade" id="plenariaModal" tabindex="-1" aria-labelledby="plenariaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content plenaria-modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="plenariaModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="plenaria-modal-head">
+            <img src="" alt="" class="plenaria-modal-photo" />
+            <div>
+              <div class="plenaria-modal-name"></div>
+              <div class="plenaria-modal-org"></div>
+            </div>
+          </div>
+          <h6 class="plenaria-modal-resumen-label">Resumen</h6>
+          <div class="plenaria-modal-resumen"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <hr class="divider" />
 
@@ -547,5 +594,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/plenarias.js"></script>
 </body>
 </html>

@@ -240,8 +240,43 @@ table.schedule .time { color: #535353; text-align: right; white-space: nowrap; f
 .legend .dot.r { background: var(--red); }
 
 /* ---------- Plenarias ---------- */
+.plenaria-card {
+  background: none; border: none; padding: 0; margin: 0;
+  display: block; width: 100%; text-align: left; font: inherit; color: inherit;
+  cursor: pointer;
+}
+.plenaria-card:hover .p-title { color: var(--blue); }
+.plenaria .p-photo {
+  width: 128px; height: 128px; border-radius: 50%;
+  object-fit: cover; object-position: center 20%;
+  filter: grayscale(1) contrast(1.02);
+  background: #eee; display: block; margin-bottom: 1.25rem;
+}
 .plenaria .p-title { font-weight: 700; font-size: 22px; line-height: 1.25; letter-spacing: -0.03em; text-decoration: underline; }
 .plenaria .p-meta { font-size: 15px; color: #000; line-height: 1.5; margin-top: 1rem; }
+
+.plenaria-modal-content { border-radius: 16px; border: none; }
+.plenaria-modal-content .modal-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.plenaria-modal-head { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1.5rem; }
+.plenaria-modal-photo {
+  width: 84px; height: 84px; flex: 0 0 84px; border-radius: 50%;
+  object-fit: cover; object-position: center 20%;
+  filter: grayscale(1) contrast(1.02);
+  background: #eee; display: block;
+}
+.plenaria-modal-name { font-weight: 700; font-size: 17px; }
+.plenaria-modal-org { font-size: 14px; color: var(--gray-2); }
+.plenaria-modal-resumen-label {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700; font-size: 15px; text-transform: uppercase;
+  letter-spacing: 0.04em; color: var(--gray-2); margin-bottom: .75rem;
+}
+.plenaria-modal-resumen p { color: #575756; font-size: 15px; line-height: 1.6; margin-bottom: .85rem; }
+.plenaria-modal-resumen p:last-child { margin-bottom: 0; }
 
 /* ---------- Sede ---------- */
 .sede-img { width: 100%; border-radius: 4px; object-fit: cover; }
