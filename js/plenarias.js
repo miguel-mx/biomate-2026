@@ -12,11 +12,14 @@ var PLENARIAS = {
     ]
   },
   miramontes: {
-    title: "Título por confirmar",
+    title: "El origen del orden espacial",
     name: "Pedro Eduardo Miramontes Vidal",
     org: "Facultad de Ciencias, UNAM",
     img: "assets/miramontes.png",
-    resumen: null
+    resumen: [
+      "Uno de los temas más antiguos y controversiales de la ciencia es la cuestión del origen de las formas en la naturaleza y, en particular, en la biología. Los patrones en las pieles de los animales, la estructura de los vegetales y la forma de las colonias bacterianas, son ejemplos de la gran riqueza dinámica de la naturaleza; sin embargo, su origen aún está lejos de comprenderse por completo.",
+      "Esta presentación pretende hacer un recorrido histórico por las ideas que estos problemas han planteado y mostrar que las respuestas a estos cuestionamientos son imposibles de obtener sin el concurso de las matemáticas y la física."
+    ]
   },
   jesus: {
     title: "Una apreciación de los sistemas dinámicos en años recientes",
