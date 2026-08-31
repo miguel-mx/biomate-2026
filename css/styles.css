@@ -252,6 +252,7 @@ table.schedule .time { color: #535353; text-align: right; white-space: nowrap; f
   filter: grayscale(1) contrast(1.02);
   background: #eee; display: block; margin-bottom: 1.25rem;
 }
+
 .plenaria .p-num {
   display: inline-block;
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -261,6 +262,7 @@ table.schedule .time { color: #535353; text-align: right; white-space: nowrap; f
   border-radius: 999px; padding: 0.3em 0.85em;
   margin-bottom: 0.9rem;
 }
+
 .plenaria .p-title { font-weight: 700; font-size: 22px; line-height: 1.25; letter-spacing: -0.03em; text-decoration: underline; }
 .plenaria .p-meta { font-size: 15px; color: #000; line-height: 1.5; margin-top: 1rem; }
 
