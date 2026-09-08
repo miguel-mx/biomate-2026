@@ -289,6 +289,25 @@ table.schedule .time { color: #535353; text-align: right; white-space: nowrap; f
 .plenaria-modal-resumen p { color: #575756; font-size: 15px; line-height: 1.6; margin-bottom: .85rem; }
 .plenaria-modal-resumen p:last-child { margin-bottom: 0; }
 
+/* ---------- Panelistas ---------- */
+.panelista .p-photo {
+  width: 128px; height: 128px; border-radius: 50%;
+  object-fit: cover; object-position: center 20%;
+  filter: grayscale(1) contrast(1.02);
+  background: #eee; display: block; margin-bottom: 1.25rem;
+}
+.panelista .p-num {
+  display: inline-block;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 700; font-size: 12px; text-transform: uppercase;
+  letter-spacing: 0.06em; color: #1f6d3a;
+  background: var(--green);
+  border-radius: 999px; padding: 0.3em 0.85em;
+  margin-bottom: 0.9rem;
+}
+.panelista .p-title { font-weight: 700; font-size: 20px; line-height: 1.25; letter-spacing: -0.03em; text-decoration: underline; }
+.panelista .p-meta { font-size: 15px; color: #000; line-height: 1.5; margin-top: 0.5rem; }
+
 /* ---------- Sede ---------- */
 .sede-img { width: 100%; border-radius: 4px; object-fit: cover; }
 .sede-map-wrap {

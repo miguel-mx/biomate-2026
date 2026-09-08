@@ -480,6 +480,72 @@
 
   <hr class="divider" />
 
+  <!-- ===================== PANELISTAS ===================== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="h-section">Panelistas</h2>
+      <div class="row g-4 g-lg-5">
+        <div class="col-sm-6 col-lg-3 panelista">
+          <button type="button" class="plenaria-card" data-key="pedro">
+            <img class="p-photo" src="assets/pedro-marquez.png" alt="Pedro Márquez-Zacarías" />
+            <div class="p-num">Panelista</div>
+            <div class="p-title">Pedro Márquez-Zacarías</div>
+            <div class="p-meta">Wolfram Institute</div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-3 panelista">
+          <button type="button" class="plenaria-card" data-key="nicolas">
+            <img class="p-photo" src="assets/NICOLAS.png" alt="Nicolas Hengartner" />
+            <div class="p-num">Panelista</div>
+            <div class="p-title">Nicolas Hengartner</div>
+            <div class="p-meta">Los Alamos National Laboratory (LANL)</div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-3 panelista">
+          <button type="button" class="plenaria-card" data-key="leticia">
+            <img class="p-photo" src="assets/leticia-ramirez.png" alt="Lilia Leticia Ramírez Ramírez" />
+            <div class="p-num">Panelista</div>
+            <div class="p-title">Lilia Leticia Ramírez Ramírez</div>
+            <div class="p-meta">CIMAT</div>
+          </button>
+        </div>
+        <div class="col-sm-6 col-lg-3 panelista">
+          <button type="button" class="plenaria-card" data-key="eugenio">
+            <img class="p-photo" src="assets/azpeitia.png" alt="Eugenio Azpeitia" />
+            <div class="p-num">Panelista</div>
+            <div class="p-title">Eugenio Azpeitia</div>
+            <div class="p-meta">UNAM</div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PANELISTA MODAL ===================== -->
+  <div class="modal fade" id="panelistaModal" tabindex="-1" aria-labelledby="panelistaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content plenaria-modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="panelistaModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <div class="plenaria-modal-head">
+            <img src="" alt="" class="plenaria-modal-photo" />
+            <div>
+              <div class="plenaria-modal-name"></div>
+              <div class="plenaria-modal-org"></div>
+            </div>
+          </div>
+          <h6 class="plenaria-modal-resumen-label">Semblanza</h6>
+          <div class="plenaria-modal-resumen"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
   <!-- ===================== SEDE ===================== -->
   <section class="section" id="contacto">
     <div class="container">
@@ -605,5 +671,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/plenarias.js"></script>
+  <script src="js/panelistas.js"></script>
 </body>
 </html>
