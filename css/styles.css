@@ -227,6 +227,8 @@ table.schedule th, table.schedule td {
 }
 table.schedule thead th { font-weight: 700; color: #000; }
 table.schedule .time { color: #535353; text-align: right; white-space: nowrap; font-size: 14px; }
+table.schedule td.split { padding: 0; }
+table.schedule td.split > div { padding: 5px 6px; }
 .c-green  { background: var(--green); }
 .c-red    { background: var(--red);    color: #fff; }
 .c-yellow { background: var(--yellow); color: #8f7200; }
